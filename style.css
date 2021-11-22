@@ -1,0 +1,118 @@
+.create-trealet {
+    display: grid;
+    width: 100%;
+    padding: 5px;
+    align-self: flex-start;
+    gap: 10px;
+    margin: auto auto auto auto;
+    
+}
+
+
+.treat-title {
+}
+
+.add-item {
+    width: 100%;
+    padding: 10px;
+    background-color:rgb(245, 182, 99);
+    border-radius: 10px;
+    grid-area: 2 / 1 / 2 / 2;
+}
+.manage-item {
+    width: 100%;
+    background-color: rgb(245, 182, 99);
+    padding: 10px;
+    border-radius: 10px;
+    position: relative;
+    grid-area: 1 / 2 / 4 / 4;
+    margin-bottom: 10px;
+}
+
+.general {
+    width: 100%;
+    padding: 10px;
+    background-color:rgb(245, 182, 99);
+    border-radius: 10px;
+    grid-area: 1 / 1 / 2 / 2;
+}
+.item-list {
+    margin-top: 20px;
+}
+.item-card {
+    display: flex;
+    align-items: center;
+}
+
+.item-card #delete {
+    right: 5px;
+}
+.item-card b {
+    margin: auto auto;
+    width: 60%;
+    align-items: baseline;
+    overflow: hidden;
+}
+.list-group-item {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+#create-trealet {
+    margin-top: 5px;
+}
+
+li .badge {
+    margin: auto auto;
+}
+
+.myContainer {
+    width: 60%;
+    padding: 5px;
+    background-color: #7E9C6F;
+    border-radius: 15px;
+    margin: 50px auto auto auto;
+}
+
+h1 {
+    font-weight: bold;
+    display: flex;
+    margin: auto auto;
+}
+
+.bg-title {
+    font-size: 24px;
+    color: white;
+    margin: auto auto;
+
+    
+}
+
+@media only screen and (max-width: 800px) {
+    .myContainer {
+    }
+    .general {
+        grid-area: 1;
+    }
+    .manage-item {
+        grid-area: 3;
+    }
+    .add-item {
+        grid-area: 2;
+    }
+}
+
+
+#description-form {
+    height: 150px;
+    text-overflow: wrap;
+}
+
+.my-bg-btn {
+    background-color: #874526;
+    color: white;
+}
+
+.my-bg-badge {
+    background-color: #7E9C6F;
+    color: white;
+}
