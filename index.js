@@ -44,16 +44,28 @@ topicDescInput.addEventListener('keyup', (e) => {
     }
 })
 
+var myTopic = {
+    title: '',
+    desc: '',
+    items: []
+}
+
 var topicCreate = document.getElementById('topic-create-button');
 topicCreate.addEventListener('click', createTopic);
 function createTopic() {
+    let title = manageItem.querySelector(".badge");
+
     let tempTopicTitle = topicTitleInput.value;
+    if (title.innerHTML != "Quản lý thẻ") {alert('Hãy hoàn tất chủ đề đã thêm!!!'); return;}
+
     if (tempTopicTitle == '') {alert('Chưa nhập chủ đề!!!'); return;}
     for (let i in topicList) {
         if (topicList[i].title == tempTopicTitle) {alert(`Chủ đề ${tempTopicTitle} đã tồn tại!!!`); return;}
     }
-    let title = manageItem.querySelector(".badge");
+
     title.innerHTML = tempTopicTitle;
+    myTopic.title = topicTitleInput.value;
+    myTopic.desc = topicDescInput.value;
     topicTitleInput.value = '';
     topicDescInput.value = '';
 }
@@ -70,8 +82,8 @@ function addTopic() {
 function addTopicToList() {
     if (itemList.length == 0) {alert('Chưa có thẻ nào được thêm!!!'); return;}
     topic = {
-        title: manageItem.querySelector(".badge").innerHTML,
-        desc: topicDescInput.value,
+        title: myTopic.title,
+        desc: myTopic.desc,
         items: itemList.map(e => e.id)
     }
     topicList.push(topic);

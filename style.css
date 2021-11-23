@@ -27,37 +27,30 @@ h1 .bg-title{
     padding: 10px;
     border-radius: 10px;
     position: relative;
-    position: relative;
 }
 
 .manage-item {
-    height: 47%;
+    height: 334px;
     background-color: rgb(245, 182, 99);
     padding: 10px;
     border-radius: 10px;
-    position: relative;
-    overflow: auto;
 }
 
 #create-topic {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 #create-trealet {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
 .manage-topic {
-    height: 48%;
+    height: 334px;
     background-color: rgb(245, 182, 99);
     padding: 10px;
     border-radius: 10px;
-    position: relative;
-    overflow: auto;
 }
 
 /* width */
@@ -82,7 +75,9 @@ h1 .bg-title{
   }
 
 .item-list {
-    margin-top: 20px;
+    margin-top: 15px;
+    overflow: auto;
+    height: 70%;
 }
 .item-card {
     display: flex;
@@ -103,8 +98,10 @@ h1 .bg-title{
     margin-bottom: 2px;
 }
 
-.topic-list-group {
-    margin-top: 20px;
+.topic-list {
+    margin-top: 15px;
+    overflow: auto;
+    height: 70%;
 }
 .topic-card {
     display: flex;
