@@ -13,77 +13,101 @@
     <title>Tạo kịch bản</title>
 </head>
 <body>
-    <div class="container myContainer">
+    <div class="myContainer container mb-3 ">
         <h1><span class="badge bg-title">Tạo kịch bản</span></h1>
-        <div class="create-trealet">
-            <div class="general">
-                <h3> <span class="badge my-bg-badge">Thông tin chung</span></h3>
-                <div class="form-floating" id="author-div" style="margin-bottom: 5px;">
-                    <input type="text" class="form-control" id="author-form" placeholder="Tác giả">
-                    <label for="author-form">Tác giả</label>
-                </div>
-                <div class="form-floating" id="title-div" style="margin-bottom: 5px;">
-                    <input type="text" class="form-control" id="title-form" placeholder="Chủ đề">
-                    <label for="title-form">Tên kịch bản</label>
-                </div>
-                <!-- <div class="form-floating" id="description-div" style="margin-bottom: 5px;">
-                    <input type="text" class="form-control" id="description-form" placeholder="Mô tả">
-
-                    <label for="description-form">Mô tả</label>
-
-
-                </div> -->
-            </div>
-            <div class="add-item">
-                <div class="mb-3">
-                    <h3> <span class="badge my-bg-badge">Thêm thẻ</span></h3>
-                    <div class="form-floating" id="id-div" style="margin-bottom: 5px;">
-                        <input type="text" class="form-control" id="id-form" placeholder="ID">
-                        <label for="id-form">ID</label>
+        <div class="create-trealet row">
+            <div class="col-md-6">
+                <div class="general mb-3">
+                    <h3> <span class="badge my-bg-badge">Thông tin chung</span></h3>
+                    <div class="form-floating" id="author-div" style="margin-bottom: 5px;">
+                        <input type="text" class="form-control" id="author-form" placeholder="Tác giả">
+                        <label for="author-form">Tác giả</label>
                     </div>
-                    
-                    
+                    <div class="form-floating" id="title-div" style="margin-bottom: 5px;">
+                        <input type="text" class="form-control" id="title-form" placeholder="Chủ đề">
+                        <label for="title-form">Tên kịch bản</label>
+                    </div>
+                </div>
+                <div class="topic mb-3">
+                    <h3> <span class="badge my-bg-badge">Thêm chủ đề</span></h3>
+                    <div class="form-floating" id="topic-title-div" style="margin-bottom: 5px;">
+                        <input type="text" class="form-control" id="topic-title-form" placeholder="Tên chủ đề">
+                        <label for="topic-title-form">Tên chủ đề</label>
+                    </div>
+                    <div class="form-floating" id="topic-desc-div" style="margin-bottom: 5px;">
+                        <textarea class="form-control" id="topic-desc-form" placeholder="Mô tả" style="height: 100px;"></textarea>
+                        <label for="topic-desc-form">Mô tả</label>
+                    </div>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-right: 10px; margin-top: 10px;" >
-                        <input class="btn my-bg-btn" type="button" value="Thêm" id="add-button">
+                        <input class="btn my-bg-btn" type="button" value="Thêm" id="topic-create-button">
+                    </div>
+                </div>
+                <div class="add-item mb-3">
+                    <div class="mb-3">
+                        <h3> <span class="badge my-bg-badge">Thêm thẻ</span></h3>
+                        <div class="form-floating" id="id-div" style="margin-bottom: 5px;">
+                            <input type="text" class="form-control" id="id-form" placeholder="ID">
+                            <label for="id-form">ID</label>
+                        </div>
+                        
+                        
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end" style="margin-right: 10px; margin-top: 10px;" >
+                            <input class="btn my-bg-btn" type="button" value="Thêm" id="add-button">
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="manage-item">
-                <h3> <span class="badge my-bg-badge">Quản lý thẻ</span></h3>
-                <div class="item-list">
-                    <ul class="list-group"></ul>
-                </div>
-                <div id="create-trealet">
-                    <button type="button" class="btn my-bg-btn" data-bs-toggle="modal" data-bs-target="#title-input" id="create-trealet-button">Tạo kịch bản</button>
-                </div>
-
-                <div class="modal fade" tabindex="-1" id="title-input">
-                    <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                        <h5 class="modal-title">Tên tệp kịch bản tải về</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="form" id="title-div">
-                                <input type="text" class="form-control" id="download-title-form" placeholder="VD: Thời kì đồ đá">
+            <div class="col-md-6">
+                <div class="manage-item mb-3">
+                    <h3> <span class="badge my-bg-badge">Quản lý thẻ</span></h3>
+                    <div class="item-list">
+                        <ul class="list-group item-list-group"></ul>
+                    </div>
+                    <div id="create-topic">
+                        <button type="button" class="btn my-bg-btn" id="add-topic-button">Thêm chủ đề</button>
+                    </div>
+    
+                    <div class="modal fade" tabindex="-1" id="title-input">
+                        <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <h5 class="modal-title">Tên tệp kịch bản tải về</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form" id="title-div">
+                                    <input type="text" class="form-control" id="download-title-form" placeholder="VD: Thời kì đồ đá">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Thoát</button>
+                            <button type="button" class="btn btn-primary" onclick="createTrealet()">Lưu</button>
                             </div>
                         </div>
-                        <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Thoát</button>
-                        <button type="button" class="btn btn-primary" onclick="createTrealet()">Lưu</button>
                         </div>
                     </div>
+                </div>
+                <div class="manage-topic mb-3">
+                    <h3><span class="badge my-bg-badge">Quản lý chủ đề</span></h3>    
+                    <div class="topic-list">
+                        <ul class="list-group topic-list-group"></ul>
+                    </div>      
+                    <div id="create-trealet">
+                        <button type="button" class="btn my-bg-btn" data-bs-toggle="modal" data-bs-target="#title-input" id="create-trealet-button">Tạo kịch bản</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <script>
-        const dragArea = document.querySelector(".list-group");
+        const dragArea = document.querySelector(".item-list-group");
         new Sortable(dragArea, {
-        animation: 350
-    });
+            animation: 350
+        });
+        const dragArea2 = document.querySelector(".topic-list-group");
+        new Sortable(dragArea2, {
+            animation: 350
+        });
     </script>
     <script src="index.js"></script>
 
