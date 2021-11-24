@@ -55,7 +55,8 @@ h1 .bg-title{
 
 /* width */
 ::-webkit-scrollbar {
-    width: 8px;
+    width: 5px;
+    height: 5px;
     border-radius: 3px;
   }
   
@@ -121,6 +122,11 @@ h1 .bg-title{
     margin-top: 2px;
     margin-bottom: 2px;
 }
+
+.topic-id {
+    max-width: 200px;
+    overflow: auto;
+}
 #create-trealet {
     margin-top: 5px;
 }
@@ -178,4 +184,6 @@ h1 {
 .my-bg-badge {
     background-color: #7E9C6F;
     color: white;
+    width: 100%;
+    overflow: auto;
 }
